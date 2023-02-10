@@ -1,0 +1,103 @@
+Switching modes
+i - for editing mode
+Esc\Ctrl + { to returning to command mode
+: for command mode
+
+Commands:
+!q - quite without saving
+x - save and quit
+w - write the changes to disk
+ZZ - saves the file and quits vim
+
+Navigate in editor
+0  move to beginning of the current line
+$  move to end of line
+^  move to the first non-blank character of the line
+H  move to the top of the current window (high)
+M  move to the middle of the current window (middle)
+L  move to the bottom line of the current window (low)
+1G move to the first line of the file
+20G move to the 20th line of the file
+G move to the last line of the file
+g move to the top of the file
+20[Up Arrow]  moves 20 lines up from the current position
+20[Down Arrow] moves 20 lines down from the current position
+^E Scroll window down one line
+^Y Scroll window up one line
+^F Scroll down one page
+^B Scroll up one page
+
+
+Move between words
+1. w to move to beginning of next word
+2. b navigates one word back
+3. e to move to end of next word
+
+Navigate and switch to Insert Mode:
+1. A - moves to the end of the current line and switches to insert mode
+2. a - changes to insert mode at the cursor position
+3. I - moves to the beginning of the current line and switches to insert mode
+4. i - At the current cursor position and switches to insert mode
+5. O - Inserts a new line on top of the current cursor position and switches to insert mode
+6. o - Inserts a new line on bottom of the current cursor position and switches to insert mode
+7. c - Delete text and start insert mode
+8. C - Delete till end of the line and switch to insert mode
+9. s - Delete current character and enter to insert mode. Eg 5s means delete 5 characters from the current position
+10. S - Delete current line and switch to insert mode
+
+Show line numbers
+[Esc] + :set number
+
+Hide line numbers
+[Esc] + :set nonumber
+
+Search Highlight
+:set hlsearch
+
+Deleting Text
+x  Delete character to the right of cursor
+X  Delete character to the left of cursor
+D  Delete to the end of the line
+dd Delete current line
+:d Delete current line
+dgg Deletes all lines above the current line
+dG  Delete all lines from current to last line
+d1G delete from current cursor position till end of line 1
+C   Delete till end of the line from current cursor position and switches to insert mode
+d$  Delete till end of the line from current cursor position
+
+
+Undo
+last change - [Esc] + u
+all changes in a line - [Esc] + U
+Redo Ctrl + R
+
+
+Search
+/<searchTerm> does search whole word search (Use N and n to move forward and backward)
+/\c<searchTerm> does case insensitive search
+*  to search the current term where the cursor is placed
+g* to search for current text that is not a whole word. Ex: searching “for” will find “for” in forgot, form etc
+%s/<searchTerm>/<replace>/g - finds and replace the search term globally
+Example:
+- Replaces all isntance of article across the entire file with tutorial
+  :%s/article/tutorial/g
+
+- Replaces all isntance of article in a line with tutorial
+  :%s/article/tutorial/g
+
+- Case insensitive search and replace
+  :%s/article/tutorial/gi
+
+- Search and replace with confirmation for each replace. “y” for yes, “n” for no, and “a” for all occurrences press “q” to quit or “l”to replace only one line
+  :%s/article/tutorial/gc
+
+
+Copy Paste
+y - copy line
+Y - Copy the current line
+yw - copy the current word the cursor is
+P - paste before the current line
+p - paste after the current line
+V - visually select the current line
+v - use arrow keys to select the lines you wish

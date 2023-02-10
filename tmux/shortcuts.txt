@@ -1,0 +1,46 @@
+#https://tmuxcheatsheet.com/
+
+#Alternatives to tmux - screen
+#Pros
+# Run htop, rolling logs (tail -f filename)
+
+#attach tmux to existing session
+tmux attach
+
+#Split pane Horiztonally
+ctrl+b "
+
+#Split pane Vertically
+ctrl+b %
+
+#Exit pane
+exit
+
+#Navigate between pane
+Ctrl + B ->
+Ctrl + B <-
+
+#Create a new window (like new tab)
+Ctrl + b c
+
+#rename window
+ctrl + b ,
+
+# ************ Tmux Session ************
+
+#disconnect from tmux session
+ctrl + b d
+
+#List tmux sessions (from outside tmux)
+tmux list-sessions
+
+#List tmux sessions (from inside tmux)
+ctrl + b S
+
+#attach to sepecific tmux session
+attach tmux -t <number>
+
+#rename session
+ctrl + b $
+
+# ************ Tmux Session ************

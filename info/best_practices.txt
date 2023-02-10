@@ -1,0 +1,12 @@
+Storage
+- script files are stored in "/usr/local/bin"
+
+Permissions
+- Prevent users from modifying the script, and make sure to require root permissions to do so
+- Script is owned by the group and user
+sudo chown root:root <Scriptfilename>
+
+Extension
+- File extension is NOT required in Linuz at all, hence script files without .sh is acceptable
+- without extensions script files are interpeted with the shebang (#!/bin/bash)
+

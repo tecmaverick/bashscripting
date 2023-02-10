@@ -1,0 +1,35 @@
+Streams in Linux are treated as though they were files.
+0 - represents std in, is the standard input stream
+
+1 - presents std out. Text output from the command to the shell is delivered via the stdout (standard out) stream
+    To explicitly redirect  stdout, use 1>
+
+2 - presents std error. To explicitly redirect  stderr, use 2>
+
+
+# Sends both successful and un-successful  output to screen
+ls
+
+# Sends successful output to /dev/null
+ls 1> /dev/null
+
+# Sends error output to /dev/null
+ls 2> /dev/null
+
+# Send both std output and error to a file
+ls &> file.txt
+./error.sh > capture.txt 2>&1
+
+# Send std output and std error to separate files
+cd /etc
+find .  1>~/find_success.txt 2>~/find_fail.txt
+
+# Send output to two files
+echo "abc">>success.txt >>fail.txt
+
+# Detect redirection within script
+if [ -t 0 ]; then
+  echo "stdin from keyboard"
+else
+  echo "stdin from a pipe or file"
+fi
