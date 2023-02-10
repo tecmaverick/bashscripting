@@ -86,3 +86,8 @@ lsof | wc -l
 
 #View list of open file descriptors
 lsof -i -P
+
+#******************************************************************
+#read file contents and store in variable
+data=$(<filename.txt)
+echo "$data"
