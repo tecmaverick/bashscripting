@@ -4,6 +4,7 @@ mkdir newdirname && cd $_
 
 # List only directories
 ls -d */
+find . -type d
 
 # List dirs with datetime stamp, size (human readable), hidden dirs
 ls -lahd */

@@ -89,5 +89,11 @@ lsof -i -P
 
 #******************************************************************
 #read file contents and store in variable
+#Option1:
 data=$(<filename.txt)
 echo "$data"
+
+#Option2:
+echo "$(<filename.txt)"
+
+#******************************************************************
