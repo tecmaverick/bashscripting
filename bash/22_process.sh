@@ -16,6 +16,7 @@ sudo pkill -u postgres
 
 # Change the process priority to the lowest -20 lowest and 20 is the highest. 0 is the default priority for all process
 renice 20 -p $(pgrep "ProcessName")
+for f in $(pgrep 'ProcessName'); do renice +20 -p $f; done
 
 # List all open files (Disk and Network) by a specific process
 lsof | awk '{ if ($1=="ProcessName") { print}}'
