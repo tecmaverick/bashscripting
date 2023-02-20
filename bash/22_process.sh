@@ -13,3 +13,9 @@ pgrep <processName>| xargs kill -9
 
 #Kills all process with the name postgres
 sudo pkill -u postgres
+
+# Change the process priority to the lowest -20 lowest and 20 is the highest. 0 is the default priority for all process
+renice 20 -p $(pgrep "ProcessName")
+
+# List all open files (Disk and Network) by a specific process
+lsof | awk '{ if ($1=="ProcessName") { print}}'
