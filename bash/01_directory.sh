@@ -50,3 +50,6 @@ fi
 
 #****************************************
 
+#Get specific directory size in human readable format
+du -sh dirName
+
