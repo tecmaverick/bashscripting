@@ -97,3 +97,10 @@ echo "$data"
 echo "$(<filename.txt)"
 
 #******************************************************************
+
+#Find and replace text inside files case insensitive search
+# Mac
+find . -type f -exec sed -i "" 's/TextToFind/TextToReplaceWith/gi' {} \;
+
+#Linux
+find . -type f -exec sed -i 's/TextToFind/TextToReplaceWith/gi' {} \;
